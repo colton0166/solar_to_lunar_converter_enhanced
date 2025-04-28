@@ -22,7 +22,7 @@ def index():
 
         # 修正臘月顯示
         month_chinese = lunar.getMonthInChinese()
-        if month_chinese == "蜡":
+        if month_chinese == "腊":
             month_chinese = "十二"
         elif month_chinese =="冬":
              month_chinese = "十一"
