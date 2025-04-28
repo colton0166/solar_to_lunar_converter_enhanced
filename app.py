@@ -43,7 +43,7 @@ def index():
             "猪": "豬"
 }
 
-zodiac = zodiac_mapping.get(zodiac_simple, zodiac_simple)
+        zodiac = zodiac_mapping.get(zodiac_simple, zodiac_simple)
         year_ganzhi = lunar.getYearInGanZhi()
         is_after_lichun = solar.getLunar().getJieQiTable().get("立春")
         if is_after_lichun and solar.toYmd() >= is_after_lichun.toYmd():
