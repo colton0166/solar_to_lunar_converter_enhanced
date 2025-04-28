@@ -28,6 +28,8 @@ def index():
              month_chinese = "十一"
         lunar_date = f"{month_chinese}月{lunar.getDayInChinese()}"
 
+        zodiac_simple = lunar.getYearShengXiao()
+
         zodiac_mapping = {
             "鼠": "鼠",
             "牛": "牛",
