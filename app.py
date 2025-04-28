@@ -28,7 +28,22 @@ def index():
              month_chinese = "十一"
         lunar_date = f"{month_chinese}月{lunar.getDayInChinese()}"
 
-        zodiac = lunar.getYearShengXiao()
+        zodiac_mapping = {
+    "鼠": "鼠",
+    "牛": "牛",
+    "虎": "虎",
+    "兔": "兔",
+    "龍": "龍",
+    "蛇": "蛇",
+    "馬": "馬",
+    "羊": "羊",
+    "猴": "猴",
+    "雞": "雞",
+    "狗": "狗",
+    "豬": "豬"
+}
+
+zodiac = zodiac_mapping.get(zodiac_simple, zodiac_simple)
         year_ganzhi = lunar.getYearInGanZhi()
         is_after_lichun = solar.getLunar().getJieQiTable().get("立春")
         if is_after_lichun and solar.toYmd() >= is_after_lichun.toYmd():
